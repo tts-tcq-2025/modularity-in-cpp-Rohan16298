@@ -2,17 +2,9 @@
 #define TELCO_COLOR_CODER_H
 
 #include <string>
+#include "TelCoColorCoderColors.h"
 
-namespace TelCoColorCoder
-{
-    enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
-    enum MinorColor { BLUE, ORANGE, GREEN, BROWN, SLATE };
-
-    constexpr int numberOfMajorColors = 5;
-    constexpr int numberOfMinorColors = 5;
-
-    extern const char* MajorColorNames[numberOfMajorColors];
-    extern const char* MinorColorNames[numberOfMinorColors];
+namespace TelCoColorCoder {
 
     class ColorPair {
     private:
@@ -27,8 +19,8 @@ namespace TelCoColorCoder
 
     ColorPair GetColorFromPairNumber(int pairNumber);
     int GetPairNumberFromColor(MajorColor major, MinorColor minor);
-
     void PrintColorCodeManual();
+
 }
 
 #endif // TELCO_COLOR_CODER_H
