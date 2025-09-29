@@ -2,11 +2,9 @@
 #include <iostream>
 
 namespace TelCoColorCoder {
-
     const char* MajorColorNames[numberOfMajorColors] = {
         "White", "Red", "Black", "Yellow", "Violet"
     };
-
     const char* MinorColorNames[numberOfMinorColors] = {
         "Blue", "Orange", "Green", "Brown", "Slate"
     };
@@ -48,5 +46,4 @@ namespace TelCoColorCoder {
                       << MinorColorNames[pair.getMinor()] << "\n";
         }
     }
-
 }
