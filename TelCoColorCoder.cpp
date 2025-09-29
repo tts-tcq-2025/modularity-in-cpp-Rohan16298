@@ -12,8 +12,7 @@ namespace TelCoColorCoder {
     };
 
     ColorPair::ColorPair(MajorColor major, MinorColor minor)
-        : majorColor(major), minorColor(minor)
-    {}
+        : majorColor(major), minorColor(minor) {}
 
     MajorColor ColorPair::getMajor() const {
         return majorColor;
@@ -44,8 +43,8 @@ namespace TelCoColorCoder {
         std::cout << "--------------------------------------\n";
         for (int i = 1; i <= numberOfMajorColors * numberOfMinorColors; ++i) {
             ColorPair pair = GetColorFromPairNumber(i);
-            std::cout << i << "           | "
-                      << MajorColorNames[pair.getMajor()] << "       | "
+            std::cout << i << " | "
+                      << MajorColorNames[pair.getMajor()] << " | "
                       << MinorColorNames[pair.getMinor()] << "\n";
         }
     }
