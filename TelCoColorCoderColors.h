@@ -2,6 +2,7 @@
 #define TELCO_COLOR_CODER_COLORS_H
 
 namespace TelCoColorCoder {
+
     enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
     enum MinorColor { BLUE, ORANGE, GREEN, BROWN, SLATE };
 
@@ -10,6 +11,7 @@ namespace TelCoColorCoder {
 
     extern const char* MajorColorNames[numberOfMajorColors];
     extern const char* MinorColorNames[numberOfMinorColors];
+
 }
 
 #endif // TELCO_COLOR_CODER_COLORS_H
