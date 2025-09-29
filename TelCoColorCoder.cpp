@@ -2,9 +2,11 @@
 #include <iostream>
 
 namespace TelCoColorCoder {
+
     const char* MajorColorNames[numberOfMajorColors] = {
         "White", "Red", "Black", "Yellow", "Violet"
     };
+
     const char* MinorColorNames[numberOfMinorColors] = {
         "Blue", "Orange", "Green", "Brown", "Slate"
     };
@@ -41,9 +43,7 @@ namespace TelCoColorCoder {
         std::cout << "--------------------------------------\n";
         for (int i = 1; i <= numberOfMajorColors * numberOfMinorColors; ++i) {
             ColorPair pair = GetColorFromPairNumber(i);
-            std::cout << i << " | "
-                      << MajorColorNames[pair.getMajor()] << " | "
-                      << MinorColorNames[pair.getMinor()] << "\n";
+            std::cout << i << " | " << MajorColorNames[pair.getMajor()] << " | " << MinorColorNames[pair.getMinor()] << "\n";
         }
     }
 }
