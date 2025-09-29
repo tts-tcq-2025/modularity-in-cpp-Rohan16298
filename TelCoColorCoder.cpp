@@ -1,8 +1,8 @@
 #include "TelCoColorCoder.h"
 #include <iostream>
 
-namespace TelCoColorCoder
-{
+namespace TelCoColorCoder {
+
     const char* MajorColorNames[numberOfMajorColors] = {
         "White", "Red", "Black", "Yellow", "Violet"
     };
@@ -24,19 +24,14 @@ namespace TelCoColorCoder
     }
 
     std::string ColorPair::ToString() const {
-        std::string colorPairStr = MajorColorNames[majorColor];
-        colorPairStr += " ";
-        colorPairStr += MinorColorNames[minorColor];
-        return colorPairStr;
+        return std::string(MajorColorNames[majorColor]) + " " + MinorColorNames[minorColor];
     }
 
     ColorPair GetColorFromPairNumber(int pairNumber) {
         int zeroBasedPairNumber = pairNumber - 1;
-        MajorColor majorColor =
-            static_cast<MajorColor>(zeroBasedPairNumber / numberOfMinorColors);
-        MinorColor minorColor =
-            static_cast<MinorColor>(zeroBasedPairNumber % numberOfMinorColors);
-        return ColorPair(majorColor, minorColor);
+        MajorColor major = static_cast<MajorColor>(zeroBasedPairNumber / numberOfMinorColors);
+        MinorColor minor = static_cast<MinorColor>(zeroBasedPairNumber % numberOfMinorColors);
+        return ColorPair(major, minor);
     }
 
     int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
@@ -54,4 +49,5 @@ namespace TelCoColorCoder
                       << MinorColorNames[pair.getMinor()] << "\n";
         }
     }
+
 }
